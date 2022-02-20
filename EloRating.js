@@ -1,8 +1,8 @@
-function ExpectedScore(rating1, rating2) {
+function expectedScore(rating1, rating2) {
     return 1/(1+Math.pow(10,(rating1-rating2)/400));
 }
 
-function EloRating(ratingA, ratingB, K, winner){
+function eloRating(ratingA, ratingB, K, winner){
     const expectedScorePlayerA = ExpectedScore(ratingA, ratingB);
     const expectedScorePlayerB = ExpectedScore(ratingB, ratingA);
 
@@ -15,6 +15,6 @@ function EloRating(ratingA, ratingB, K, winner){
 
 const ratingA = 1000, ratingB = 1000, K = 30, winner = 'A';
 
-const EloRator = EloRating(ratingA, ratingB, K, winner);
+const eloRator = eloRating(ratingA, ratingB, K, winner);
 
 
